@@ -93,11 +93,15 @@
                       <br />
                       Intel® Celeron® & Intel® Pentium® Processore.
                     </div>
-                    <div class="div-20">
-                      <button on:click={goToIntelPage}>Configurazione Intel
-                      </button>
+                      <div class="div-20">
+                        <button class="learn-more" on:click={goToIntelPage}>
+                          <span class="circle" aria-hidden="true">
+                          <span class="icon arrow"></span>
+                          </span>
+                          <span class="button-text">Configura PC</span>
+                        </button>
+                      </div>
                     </div>
-                  </div>
                 </div>
                 <div class="column-2">
                   <div class="div-21">
@@ -123,7 +127,11 @@
                       tecnologia Athlon™.
                     </div>
                     <div class="div-26">
-                      <button on:click={goToAmdPage}>Configurazione AMD
+                      <button class="learn-more" on:click={goToAmdPage}>
+                        <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                        </span>
+                        <span class="button-text">Configura PC</span>
                       </button>
                     </div>
                   </div>
@@ -155,7 +163,11 @@
                         <div class="div-41">SEAGATE BARRACUDA HDD 1 TB</div>
                         <div class="div-42">SOLIDIGM P41+ GEN 4 M.2 512 GB</div>
                       </div>
-                      <div class="div-43">Configura questo PC</div>
+                      <div class="div-43">
+                        <button id="bottone1"><strong>
+                          Vai alla pagina
+                        </strong></button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -182,7 +194,9 @@
                         <div class="div-56">SOLIDIGM P44 PRO GEN 4 M.2 512 GB</div>
                         <div class="div-57">ASUS® TUF GAMING X670E-PLUS WIFI</div>
                       </div>
-                      <div class="div-58">Configura questo PC</div>
+                      <button id="bottone1"><strong>
+                        Vai alla pagina
+                      </strong></button>
                     </div>
                   </div>
                 </div>
@@ -211,7 +225,9 @@
                         <div class="div-71">SSD KINGSTON A400 240 GB</div>
                         <div class="div-72">SEAGATE BARRACUDA HDD 2 TB</div>
                       </div>
-                      <div class="div-73">Configura questo PC</div>
+                      <button id="bottone1"><strong>
+                        Vai alla pagina
+                      </strong></button>
                     </div>
                   </div>
                 </div>
@@ -1545,6 +1561,121 @@
 
 
 
+/*BOTTONE AMD E INTEL*/
+  button {
+ position: relative;
+ display: inline-block;
+ cursor: pointer;
+ outline: none;
+ border: 0;
+ vertical-align: middle;
+ text-decoration: none;
+ background: transparent;
+ padding: 0;
+ font-size: inherit;
+ font-family: inherit;
+}
+
+button.learn-more {
+ width: 12rem;
+ height: auto;
+}
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: relative;
+ display: block;
+ margin: 0;
+ width: 3rem;
+ height: 3rem;
+ background: #282936;
+ border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto;
+ background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0.75rem 0;
+ margin: 0 0 0 1.85rem;
+ color: #282936;
+ font-weight: 700;
+ line-height: 1.6;
+ text-align: center;
+ text-transform: uppercase;
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+
+
+
+/*BOTTONI PER LA CONFIGURAZIONE DEI 3 PC A FINE PAGINA*/
+#bottone1 {
+ padding-left: 33px;
+ padding-right: 33px;
+ padding-bottom: 16px;
+ padding-top: 16px;
+ border-radius: 9px;
+ background: #d5f365;
+ border: none;
+ font-family: inherit;
+ text-align: center;
+ cursor: pointer;
+ transition: 0.4s;
+}
+
+#bottone1:hover {
+ box-shadow: 7px 5px 56px -14px #C3D900;
+}
+
+#bottone1:active {
+ transform: scale(0.97);
+ box-shadow: 7px 5px 56px -10px #C3D900;
+}
 
     </style>
 
